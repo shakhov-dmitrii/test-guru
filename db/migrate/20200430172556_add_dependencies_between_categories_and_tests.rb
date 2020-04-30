@@ -1,5 +1,5 @@
 class AddDependenciesBetweenCategoriesAndTests < ActiveRecord::Migration[6.0]
   def change
-    add_column(:tests, :category_id, :integer)
+    add_reference(:tests, :categories, foreign_key: true)
   end
 end
