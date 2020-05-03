@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #Create test user
-user = User.create(name: "Tester", login: "qa", password: "1234")
-user2 = User.create(name: "Tester 2", login: "qa", password: "1234")
+user = User.create(name: "Tester", email: "qa@aa.aa", password: "1234")
+user2 = User.create(name: "Tester 2", email: "qa@bb.bb", password: "1234")
 
 #Create test categories
 first_category = Category.create(title: "Ruby")
@@ -16,11 +16,11 @@ second_category = Category.create(title: "Golang")
 third_category = Category.create(title: "JavaScript")
 
 #Create test tests
-first_test = Test.create(title: "Ruby and RoR", category_id: first_category.id, author_id: user.id)
-second_test = Test.create(title: "Golang and High-load", category_id: second_category.id, author_id: user2.id)
-third_test = Test.create(title: "React", category_id: third_category.id, author_id: user2.id)
-fourth_test = Test.create(title: "React Native", category_id: third_category.id, author_id: user.id)
-fifth_test = Test.create(title: "Active Record", category_id: first_category.id, author_id: user2.id)
+first_test = Test.create(title: "Ruby and RoR", category_id: first_category.id, author_id: user.id, level: 0)
+second_test = Test.create(title: "Golang and High-load", category_id: second_category.id, author_id: user2.id, level: 1)
+third_test = Test.create(title: "React", category_id: third_category.id, author_id: user2.id, level: 2)
+fourth_test = Test.create(title: "React Native", category_id: third_category.id, author_id: user.id, level: 3)
+fifth_test = Test.create(title: "Active Record", category_id: first_category.id, author_id: user2.id, level: 4)
 
 #Create test resulr
 TestsUser.create(user_id: user.id, test_id: second_test.id)
