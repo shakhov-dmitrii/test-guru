@@ -19,7 +19,7 @@ class QuestionsController < ApplicationController
   def create
     @question = @test.questions.create(question_params)
 
-    if @question.errors.empty?
+    if @question.save
       redirect_to test_questions_path(@test)
     else
       render inline: '<p style="color: red; font-weight: 700; font-size: 40px;"><%= @question.errors.full_messages %></p>'
