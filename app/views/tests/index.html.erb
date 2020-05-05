@@ -1,0 +1,19 @@
+<h1>Tests list</h1>
+<table>
+  <tr>
+    <td>Test title</td>
+    <td>Category</td>
+    <td>Level</td>
+    <td>Questions</td>
+  </tr>
+  <% @tests.each do |test| %>
+    <tr>
+      <td><%= link_to test.title, test %></td>
+      <td><%= test.category.title %></td>
+      <td><%= test.level %></td>
+      <td><%= test.questions.count %></td>
+    </tr>
+  <% end %>
+</table>
+
+

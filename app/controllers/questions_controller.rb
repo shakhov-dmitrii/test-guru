@@ -1,35 +1,43 @@
 class QuestionsController < ApplicationController
   before_action :find_test, only: [:index, :new, :create]
-  before_action :find_question, only: [:show, :destroy]
+  before_action :find_question, only: [:show, :destroy, :edit, :update]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
     @questions = @test.questions.all
-
-    render inline: "<h1><%= @test.title %></h1><% @questions.each do |q|%><p><%= q.body %></p><%end%>"
   end
 
-  def show
-    render inline: "<h1><%= @question.body %></h1>"
+  def show; end
+
+  def new
+    @question = @test.questions.new
   end
 
-  def new; end
+  def edit; end
 
   def create
-    @question = @test.questions.create(question_params)
+    @question = @test.questions.new(question_params)
 
     if @question.save
-      redirect_to test_questions_path(@test)
+      redirect_to test_path(@test)
     else
-      render inline: '<p style="color: red; font-weight: 700; font-size: 40px;"><%= @question.errors.full_messages %></p>'
+      render 'new'
     end   
+  end
+
+  def update
+    if @question.update question_params
+      redirect_to question_path(@question)
+    else 
+      render 'edit'
+    end
   end
 
   def destroy
     @question.destroy
 
-    redirect_to tests_path
+    redirect_to @question.test
   end
 
   private
