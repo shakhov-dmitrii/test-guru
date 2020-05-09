@@ -22,7 +22,7 @@ class QuestionsController < ApplicationController
     if @question.save
       redirect_to test_path(@test)
     else
-      render 'new'
+      render :new
     end   
   end
 
@@ -30,7 +30,7 @@ class QuestionsController < ApplicationController
     if @question.update question_params
       redirect_to question_path(@question)
     else 
-      render 'edit'
+      render :edit
     end
   end
 

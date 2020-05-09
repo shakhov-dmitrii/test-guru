@@ -1,0 +1,10 @@
+<h1>The test <%= @test_passage.test.title %> passed</h1>
+
+<div>
+  <%= test_result_message(@test_passage) %>
+</div>
+
+<p>
+  <%= link_to 'Back to tests', tests_path %>
+</p>
+
