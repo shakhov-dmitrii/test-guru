@@ -1,5 +1,5 @@
 class TestsController < ApplicationController
-
+  before_action :authenticate_user!
   before_action :find_test, only: [:show, :start]
   before_action :find_user, only: [:start]
 
@@ -21,6 +21,6 @@ class TestsController < ApplicationController
   end
 
   def find_user
-    @user = User.first
+    @user = current_user
   end
 end
