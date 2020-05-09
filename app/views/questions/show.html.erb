@@ -1,6 +1,8 @@
 <h1><%= @question.body %></h1>
-<% @question.answers.each do |answer| %>
-  <p><%= answer.body %>
-<% end %>
-<p><%= link_to 'Back to tests', tests_path %></p>
-<p><%= link_to 'Edit question', edit_question_path(@question) %></p>
+<h2>Answers</h2>
+<ul>
+  <%= render @question.answers %>
+</ul>
+<p><%= link_to 'Add answer', new_question_answer_path(@question) %> | 
+<%= link_to 'Back to tests', tests_path %> | 
+<%= link_to 'Edit question', edit_question_path(@question) %></p>

@@ -22,9 +22,6 @@ third_test = Test.create(title: "React", category_id: third_category.id, author_
 fourth_test = Test.create(title: "React Native", category_id: third_category.id, author_id: user.id, level: 3)
 fifth_test = Test.create(title: "Active Record", category_id: first_category.id, author_id: user2.id, level: 4)
 
-#Create test resulr
-TestsUser.create(user_id: user.id, test_id: second_test.id)
-
 #Create test questions
 first_question = Question.create(body: "First test question", test_id: fifth_test.id)
 second_question = Question.create(body: "Second test question", test_id: third_test.id)
