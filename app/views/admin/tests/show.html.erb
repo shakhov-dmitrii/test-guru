@@ -1,0 +1,12 @@
+<h2><%= @test.title %></h2>
+<p><%= link_to 'New question', new_admin_test_question_path(@test) %></p>
+<table>
+  <tr>
+    <td>Question</td>
+    <td colspan="2">Actions</td>
+  </tr>
+
+  <%= render @test.questions %>
+
+</table>
+<%= link_to 'Back to tests', tests_path %>

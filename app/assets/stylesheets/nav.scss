@@ -2,4 +2,21 @@
   &.user {
     text-align: right;
   }
+
+  &.admin {
+    text-align: right;
+    color: #ffffff;
+    padding: 10px;
+  }
+
+  &-admin {
+    background-color: #3c85e8;
+
+    span {
+      color: #ffffff;
+      padding: 10px;
+      font-size: 25px;
+      font-weight: 700;
+    }
+  }
 }
