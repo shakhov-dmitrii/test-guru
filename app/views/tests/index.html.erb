@@ -1,11 +1,11 @@
-<h1>Tests list</h1>
+<h1><%= t('.header') %></h1>
 <table>
   <tr>
-    <td>Test title</td>
-    <td>Category</td>
-    <td>Level</td>
-    <td>Questions</td>
-    <td>Action</td>
+    <td><%= t('.title') %></td>
+    <td><%= t('.category') %></td>
+    <td><%= t('.level') %></td>
+    <td><%= t('.questions') %></td>
+    <td><%= t('.action') %></td>
   </tr>
   <% @tests.each do |test| %>
     <tr>
@@ -13,7 +13,7 @@
       <td><%= test.category.title %></td>
       <td><%= test.level %></td>
       <td><%= test.questions.count %></td>
-      <td><%= button_to 'Start', start_test_path(test) %></td>
+      <td><%= button_to t('.start'), start_test_path(test) %></td>
     </tr>
   <% end %>
 </table>

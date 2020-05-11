@@ -31,3 +31,57 @@
 
 en:
   hello: "Hello world"
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+
+  shared:
+    errors:
+      header: 
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  tests:
+    index:
+      header: "Tests list"
+      title: "Title"
+      category: "Category"
+      level: "Level"
+      questions: "Questions"
+      action: "Action"
+      start: "Start"
+
+  test_passages:
+    result:
+      header: "The %{title} test was completed!"
+
+  admin:
+    tests:
+      create:
+        success: "Test was successfully created."
+      index:
+        header: "Tests list"
+        title: "Title"
+        category: "Category"
+        level: "Level"
+        questions: "Questions"
+        action: "Action"
+        create_test: "Create test"
+      test:
+        edit: "Edit"
+        delete: "Delete"
+      new:
+        title: "Create new test"
+        back: "Back"
+
+  tests_mailer:
+    completed_test:
+      subject: "You complete test!"
