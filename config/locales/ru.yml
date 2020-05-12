@@ -28,6 +28,7 @@ ru:
       level: "Уровень"
       questions: "Вопросы"
       action: "Действия"
+    test:
       start: "Начать тестирование"
 
   test_passages:

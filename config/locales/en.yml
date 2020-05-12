@@ -57,6 +57,7 @@ en:
       level: "Level"
       questions: "Questions"
       action: "Action"
+    test:
       start: "Start"
 
   test_passages:

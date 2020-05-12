@@ -2,9 +2,7 @@
   <p>
     <%= t('.header', count: resource.errors.count) %>
   </p>
-  <ul>
-    <% resource.errors.full_messages.each do |err| %>
-      <li><%= err %></li>
-    <% end %>
-  </ul>
+  <% resource.errors.full_messages.each do |err| %>
+    <div class="alert alert-danger"><%= err %></div>
+  <% end %>
 <% end %>
