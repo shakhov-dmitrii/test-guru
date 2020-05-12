@@ -1,21 +1,19 @@
-<h1>Tests list</h1>
-<table>
-  <tr>
-    <td>Test title</td>
-    <td>Category</td>
-    <td>Level</td>
-    <td>Questions</td>
-    <td>Action</td>
-  </tr>
-  <% @tests.each do |test| %>
-    <tr>
-      <td><%= test.title %></td>
-      <td><%= test.category.title %></td>
-      <td><%= test.level %></td>
-      <td><%= test.questions.count %></td>
-      <td><%= button_to 'Start', start_test_path(test) %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="row">
+  <div class="col">
+    <h1><%= t('.header') %></h1>
+    <table class="table">
+      <tr>
+        <th><%= t('.title') %></td>
+        <th><%= t('.category') %></td>
+        <th><%= t('.level') %></td>
+        <th><%= t('.questions') %></td>
+        <th><%= t('.action') %></td>
+      </tr>
+      <% @tests.each do |test| %>
+        <%= render test %>
+      <% end %>
+    </table>
+  </div>
+</div>
 
 
