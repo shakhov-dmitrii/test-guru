@@ -31,5 +31,29 @@ ru:
     test:
       start: "Начать тестирование"
 
-en:
-  hello: "Привет мир"
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершен!"
+
+  admin:
+    tests:
+      create:
+        success: "Тест успешно создан."
+      index:
+        header: "Список тестов"
+        title: "Название"
+        category: "Категория"
+        level: "Уровень"
+        questions: "Вопросы"
+        action: "Действия"
+        create_test: "Создать тест"
+      test:
+        edit: "Редактировать"
+        delete: "Удалить"
+      new:
+        title: "Создание нового теста"
+        back: "Назад"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы завершили тест!"
