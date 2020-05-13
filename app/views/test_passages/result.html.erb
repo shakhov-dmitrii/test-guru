@@ -1,4 +1,4 @@
-<h1>The test <%= @test_passage.test.title %> passed</h1>
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
 <div>
   <%= test_result_message(@test_passage) %>
