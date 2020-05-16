@@ -63,6 +63,11 @@ en:
   test_passages:
     result:
       header: "The %{title} test was completed!"
+    show:
+      create_gist: "Create gist"
+    gist:
+      success: "Gist created"
+      failure: "Gist did not create"
 
   admin:
     tests:
@@ -76,12 +81,22 @@ en:
         questions: "Questions"
         action: "Action"
         create_test: "Create test"
+        gists: "Gists list"
       test:
         edit: "Edit"
         delete: "Delete"
       new:
         title: "Create new test"
         back: "Back"
+    gists:
+      index:
+        gists: "Questions on gist"
+        question: "Question"
+        url: "URL"
+        user: "User"
+        back: "Back"
+      gist:
+        github_gist: "Link to gist"
 
   tests_mailer:
     completed_test:

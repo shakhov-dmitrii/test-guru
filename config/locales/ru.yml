@@ -34,7 +34,12 @@ ru:
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
-
+    show:
+      create_gist: "Создать gist"
+    gist:
+      success: "Gist успешно создан"
+      failure: "Не удалось создать gist"
+      
   admin:
     tests:
       create:
@@ -47,12 +52,22 @@ ru:
         questions: "Вопросы"
         action: "Действия"
         create_test: "Создать тест"
+        gists: "Список на gists"
       test:
         edit: "Редактировать"
         delete: "Удалить"
       new:
         title: "Создание нового теста"
         back: "Назад"
+    gists:
+      index:
+        gists: "Список вопросов на gist"
+        question: "Вопрос"
+        url: "Ссылка"
+        user: "Пользователь"
+        back: "Назад"
+      gist:
+        github_gist: "Ссылка на gist"
 
   tests_mailer:
     completed_test:
