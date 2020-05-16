@@ -29,4 +29,8 @@ class GistQuestionService
     content.join("\n")
   end
 
+  def success?
+    self.created_at.present?
+  end
+
 end
