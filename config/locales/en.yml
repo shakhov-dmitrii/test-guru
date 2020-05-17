@@ -88,6 +88,8 @@ en:
       new:
         title: "Create new test"
         back: "Back"
+      form_inline:
+        submit: "OK"
     gists:
       index:
         gists: "Questions on gist"

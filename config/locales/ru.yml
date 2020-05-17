@@ -59,6 +59,8 @@ ru:
       new:
         title: "Создание нового теста"
         back: "Назад"
+      form_inline:
+        submit: "OK"
     gists:
       index:
         gists: "Список вопросов на gist"

@@ -36,6 +36,10 @@ class TestPassage < ApplicationRecord
     test.questions.count
   end
 
+  def progress
+    (current_question_number * 100) / questions_count
+  end
+
   private
 
   def before_validation_set_first_question
