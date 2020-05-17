@@ -1,7 +1,7 @@
 <h1>Passing the <%= @test_passage.test.title %> Test</h1>
 
 <div>
-  <h2><%= @test_passage.current_question_number %> / <%= @test_passage.questions_count %></h2>
+  <%= content_tag :div, '', class: 'test-progress', data: { test_progress: @test_passage.progress } %>
 </div>
 
 <p>

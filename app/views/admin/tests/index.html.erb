@@ -3,6 +3,7 @@
     <div class="col">    
       <h1><%= t('.header') %></h1>
       <p><%= link_to t('.create_test'), new_admin_test_path %> | <%= link_to t('.gists'), admin_gists_path %></p>
+      <%= render 'shared/errors', resource: @test %>
       <table class="table">
         <tr>
           <th class="sort-by-title pointer">
