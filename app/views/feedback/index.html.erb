@@ -1,0 +1,5 @@
+<%= form_tag '/feedback', class: 'mt-5 input-group' do %>
+  <%= label_tag :feedback, "Feedback:" %>
+  <%= text_field_tag :feedback %>
+  <%= submit_tag 'Send', class: 'btn btn-primary' %>
+<% end %>

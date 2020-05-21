@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   # resources :users, only: :create
   # resources :sessions, only: :create
 
+  get :feedback, to: 'feedback#index'
+  post :feedback, to: 'feedback#create'
+
   resources :tests, only: :index do
     member do
       post :start
