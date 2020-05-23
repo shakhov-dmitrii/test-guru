@@ -9,6 +9,8 @@ class TestPassage < ApplicationRecord
   TEST_SUCCESS_RATE = 85
 
   def accept!(answer_ids)
+    return if answer_ids.nil?
+
     if correct_answer?(answer_ids)
       self.correct_questions += 1
     end
@@ -37,7 +39,7 @@ class TestPassage < ApplicationRecord
   end
 
   def progress
-    (current_question_number * 100) / questions_count
+    ((current_question_number - 1) * 100) / questions_count
   end
 
   private
@@ -59,7 +61,7 @@ class TestPassage < ApplicationRecord
   end
 
   def remaining_questions
-    test.questions.order(:id).where('id > ?', current_question.id)
+    test.questions.order(:id).where('id > ?', current_question.id) 
   end
 
   def next_question
